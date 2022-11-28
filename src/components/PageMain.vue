@@ -1,21 +1,19 @@
 <template>
     <div>
       <div
-        v-if="arrCharacters"
-        class="row row-cols-5 g-5"
+       v-if="arrResponse"
+        class="row row-cols-4 g-5"
       >
         <CardCharacter
-          v-for="character in arrCharacters"
-          :key="character.id"
-          :img-url="character.image"
-          :name="character.name"
-          :origin="character.origin.name"
-          :species="character.species"
+          v-for="response in arrResponse"
+          :key="response"
+          :img-url="response.poster"
+          :title="response.title"
+          :author="response.author"
+          :year="response.year"
         />
       </div>
-      <div v-else>
-        Loading ...
-      </div>
+      
     </div>
   </template>
   
@@ -29,8 +27,8 @@
     },
     data() {
       return {
-        arrCharacters: null,
-        urlApi: 'https://flynn.boolean.careers/exercises/api/array/music', 
+        arrResponse: null,
+        urlApi: 'https://flynn.boolean.careers/exercises/api/array/music', // TODO: pagination
       };
     },
     created() {
@@ -38,7 +36,7 @@
       axios.get(this.urlApi)
         .then((axiosResponse) => {
           console.log(axiosResponse);
-          this.arrCharacters = axiosResponse.data.results;
+          this.arrResponse = axiosResponse.data.results;
         });
     },
   };

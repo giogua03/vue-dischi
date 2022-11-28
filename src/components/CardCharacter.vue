@@ -4,15 +4,15 @@
         <img
           :src="imgUrl"
           :alt="name"
-          
+          class="img-fluid "
         >
         <h2 class="title">
           {{ title }}
         </h2>
-        <div class="autore">
+        <div class="author">
           {{ author }}
         </div>
-        <div class="anno">
+        <div class="year">
           {{ year }}
         </div>
       </div>
@@ -20,7 +20,7 @@
   </template>
   
   <script>
-  
+
   export default {
     name: 'CardCharacter',
     props: {

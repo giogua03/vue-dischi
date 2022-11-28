@@ -20,5 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 </style>
