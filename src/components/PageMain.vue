@@ -15,7 +15,7 @@
       </div>
       
     </div>
-  </template>
+  </template>i
   
   <script>
   import axios from 'axios';
