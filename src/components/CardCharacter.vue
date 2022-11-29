@@ -25,9 +25,9 @@
     name: 'CardCharacter',
     props: {
       imgUrl: String,
-      name: String,
-      origin: String,
-      species: String,
+      title: String,
+      author: String,
+      year: String,
     },
   };
   </script>

@@ -2,7 +2,7 @@
     <div>
       <div
        v-if="arrResponse"
-        class="row row-cols-4 g-5"
+        class="row row-cols-5 g-4"
       >
         <CardCharacter
           v-for="response in arrResponse"
@@ -15,7 +15,7 @@
       </div>
       
     </div>
-  </template>i
+  </template>
   
   <script>
   import axios from 'axios';
@@ -36,7 +36,7 @@
       axios.get(this.urlApi)
         .then((axiosResponse) => {
           console.log(axiosResponse);
-          this.arrResponse = axiosResponse.data.results;
+          this.arrResponse = axiosResponse.data.response;
         });
     },
   };
