@@ -1,11 +1,11 @@
 <template>
     <div>
-      <label for="s">
+      <label for="genre">
         <input
-          id="s"
+          id="genre"
           v-model="searchString"
           type="text"
-          name="s"
+          name="genre"
           @keyup.enter="search"
         >
       </label>

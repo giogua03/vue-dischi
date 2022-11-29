@@ -14,9 +14,7 @@
           :year="response.year"
         />
       </div>
-      <div v-else>
-      Loading ...
-    </div>
+      
     </div>
   </template>
   
@@ -67,14 +65,6 @@
          .then((axiosResponse) => {
            console.log(axiosResponse);
            this.arrResponse = axiosResponse.data.result;
-         })
-         .catch((error) => {
-          console.log(error);
-           if (error.response.status === 404
-             && error.response.data.error === 'There is nothing here'
-           ) {
-             this.arrResponse = [];
-           }
          });
     },
   },

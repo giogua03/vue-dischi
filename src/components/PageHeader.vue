@@ -1,5 +1,5 @@
 <template>
-    <div class="sec">
+    <div class="seconda">
       <h1 class="text-center">
         MUSIC
       </h1>
@@ -14,7 +14,7 @@
   </script>
   
   <style lang="scss" scoped>
-    .sec{
+    .seconda{
       padding: 1rem;
       height: 100px;
       display: flex;
