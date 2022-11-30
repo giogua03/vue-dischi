@@ -6,8 +6,8 @@
         class="row row-cols-5 g-4"
       >
         <CardCharacter
-          v-for="response in arrResponse"
-          :key="response"
+          v-for="response in arrFiltered"
+          :key="response.title"
           :img-url="response.poster"
           :title="response.title"
           :author="response.author"
@@ -39,10 +39,10 @@
     arrFiltered() {
       if (this.arrResponse) {
         return this.arrResponse.filter(
-          (objResponse) => objResponse.name.trim().toLowerCase().includes(this.searchString.trim().toLowerCase()),
+          (objResponse) => objResponse.genre.trim().toLowerCase().includes(this.searchString.trim().toLowerCase()),
         );
       }
-      return null;
+      return [];
     },
   },
     created() {
@@ -57,15 +57,6 @@
     search(searchString) {
       this.searchString = searchString; 
       this.$emit('search', searchString);
-      axios.get(this.urlApi, {
-         params: {
-          name: searchString,
-         },
-       })
-         .then((axiosResponse) => {
-           console.log(axiosResponse);
-           this.arrResponse = axiosResponse.data.result;
-         });
     },
   },
   };

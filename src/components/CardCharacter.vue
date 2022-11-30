@@ -1,9 +1,9 @@
 <template>
     <div class="col">
-      <div class="contents text-center">
+      <div class="contents text-center gimt">
         <img
           :src="imgUrl"
-          :alt="name"
+          :alt="title"
           class="img-fluid "
         >
         <h2 class="title">
@@ -33,4 +33,7 @@
   </script>
   
   <style lang="scss" scoped>
+  .gimt{
+    border: 3px solid violet
+  }
   </style>
